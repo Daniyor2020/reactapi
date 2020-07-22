@@ -4,8 +4,10 @@ import { Injectable } from '@nestjs/common';
 export class ReportsService {
 
   delete(id: string):any{
-    this.data[this.data.findIndex(item=>item.id==id)]
-    return `removed report by id ${id}`
+
+    delete this.data[this.data.findIndex(item => item.id == id)];
+        return `removed report by id ${id}`
+
     
   }
 
@@ -31,13 +33,13 @@ export class ReportsService {
   private readonly data=[
     {
       id:"1",
-      name: "report1",
-      type:'kpi'
+      name: "dashboar1",
+      type:'chart'
     },
     {
       id:"2",
-      name: "report2",
-      type: ' growth'
+      name: "rdashboard",
+      type: ' pie'
     }
   ]
   
